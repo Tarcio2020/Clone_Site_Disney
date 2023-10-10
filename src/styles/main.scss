@@ -1,5 +1,31 @@
-$bgcolor: rgb(124, 51, 93);
+$corDeFundo: #040714;
+$corTextoPrincipal: silver;
+$corTextoSecundaria: #f9f9f9;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    background-color: $bgcolor;
+    background: $corDeFundo;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: $corTextoPrincipal;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text--small {
+    @include text
+}
+
+.text--small {
+    @include text(12px);
 }
