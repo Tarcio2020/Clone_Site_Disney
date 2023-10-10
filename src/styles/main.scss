@@ -1,3 +1,6 @@
+
+@use 'hero';
+
 $corDeFundo: #040714;
 $corTextoPrincipal: silver;
 $corTextoSecundaria: #f9f9f9;
@@ -18,6 +21,11 @@ body {
     color: $corTextoPrincipal;
 }
 
+@mixin title($fontSize: 28px) {
+    @include text($fontSize);
+    color: $corTextoSecundaria
+}
+
 .text--big {
     @include text(18px);
 }
@@ -29,3 +37,24 @@ body {
 .text--small {
     @include text(12px);
 }
+
+.link-text {
+    @include text(18px);
+    color: $corTextoSecundaria;
+    text-decoration: underline
+}
+
+.title--big {
+    @include title(44px)
+}
+
+.title {
+    @include title;
+}
+
+.title--small {
+    @include title(28px)
+}
+
+
+
